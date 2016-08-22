@@ -27,7 +27,14 @@ class LearningAgent(Agent):
         deadline = self.env.get_deadline(self)
 
         # TODO: Update state
-        self.state = (inputs, self.next_waypoint, deadline)
+        self.state = state_index(inputs)
+        def state_index(self, inputs):
+            return {
+                "light": inputs["light"],
+                "oncoming": inputs["oncoming"],
+                "left": inputs["left"],
+                "direction": self.next_waypoint
+            }
 
         # TODO: Select action according to your policy
         action = random.choice(Environment.valid_actions)
