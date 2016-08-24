@@ -11,14 +11,19 @@ class LearningAgent(Agent):
         self.color = 'red'  # override color
         self.planner = RoutePlanner(self.env, self)  # simple route planner to get next_waypoint
         # TODO: Initialize any additional variables here
-        self.reward = 0
+        self.dedline = self.env.get_deadline(self)
+        self.state = None
+        self.action = None
         self.next_waypoint = None
+        self.reward = None
 
     def reset(self, destination=None):
         self.planner.route_to(destination)
         # TODO: Prepare for a new trip; reset any variables here, if required
         self.state = None
+        self.action = None
         self.next_waypoint = None
+        self.reward = 0
 
     def update(self, t):
         # Gather inputs
@@ -27,14 +32,22 @@ class LearningAgent(Agent):
         deadline = self.env.get_deadline(self)
 
         # TODO: Update state
-        self.state = state_index(inputs)
-        def state_index(self, inputs):
-            return {
-                "light": inputs["light"],
-                "oncoming": inputs["oncoming"],
-                "left": inputs["left"],
-                "direction": self.next_waypoint
-            }
+        action_okay = True
+
+        if self.next_waypoint == 'right':
+            if inputs['light'] == 'red' and inputs['left'] == 'forward':
+                action_okay = False
+        elif self.next_waypoint == 'forward':
+            if inputs['light'] == 'red':
+                action_okay = False
+        elif self.next_waypoint == 'left':
+            if inputs['light'] == 'red' or (inputs['oncoming'] == 'forward' or inputs['oncoming'] == 'right'):
+                action_okay = False
+
+        if action_okay == False:
+            action = None
+
+        self.state = (inputs, self.next_waypoint, deadline)
 
         # TODO: Select action according to your policy
         action = random.choice(Environment.valid_actions)
@@ -44,7 +57,6 @@ class LearningAgent(Agent):
 
         # TODO: Learn policy based on state, action, reward
         #self.update_q_value(self.state, action, reward)
-
         print "LearningAgent.update(): deadline = {}, inputs = {}, action = {}, reward = {}".format(deadline, inputs, action, reward)  # [debug]
 
 
