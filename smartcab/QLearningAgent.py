@@ -12,6 +12,9 @@ class LearningAgent(Agent):
         self.planner = RoutePlanner(self.env, self)  # simple route planner to get next_waypoint
         # TODO: Initialize any additional variables here
         self.dedline = self.env.get_deadline(self)
+        self.possible_action = Environment.valiable_action
+        self.Q_dict = dict()
+        self.alpfa = 0.9
         self.state = None
         self.action = None
         self.next_waypoint = None
@@ -36,22 +39,31 @@ class LearningAgent(Agent):
         best_Q = [self.get_Q(state, action) for action in self.possible_action]
         return max(best_Q)
 
-    def get_policy(self, state):
+    def get_action(self, state):
         """
         Choose the best action
         """
         best_action = random.choice(self.possible_action)
-        qval = qtable[(current_state, best_action)]
-        for all (state, action) pairs in qtable:
-            if state == current_state and qtable[(state, action)] > qval:
+        best_Q = [self.get_Q(state, action) for action in self.possible_action]
+        key = (state, action)
+
+        for key in Q_dict:
+            if state == current_state and self.get_Q(state, action) > best_Q:
                 best_action = action
-                qval = qtable[(state, action)]
+                best_Q = self.get_Q(state, action)
             else:
                 continue
         return best_action
 
-    def update_Q(self, state, action, next_state, reward):
-        
+    def update_Q(self, state, action, nextState, reward):
+        """
+        Q-Value update
+        """
+        key = (state, action)
+        if (key not in self.Q_dict):
+            self.Q_dict[key] = 10.0
+        else:
+            self.Q_dict[key] = self.Q_dict[key] + self.alpfa * (reward + self.gamma * self.get_maxQ(nextState) - self.Q_dict[key])
 
     def update(self, t):
         # Gather inputs
@@ -75,16 +87,22 @@ class LearningAgent(Agent):
         if action_okay == False:
             action = None
 
-        self.state = (inputs, self.next_waypoint, deadline)
+        self.next_state = (inputs, self.next_waypoint, deadline)
 
         # TODO: Select action according to your policy
-        action = random.choice(Environment.valid_actions)
+        action = self.get_action(self.next_state)
 
         # Execute action and get reward
-        reward = self.env.act(self, action)
+        next_reward = self.env.act(self, action)
 
         # TODO: Learn policy based on state, action, reward
-        self.update_Qvalue(self.state, action, reward)
+        if self.reward != None:
+            self.update_Q(self.state, self.action, self.next_state, self.reward)
+
+        self.state = self.next_state
+        self.action = action
+        self.reward = next_reward
+
 
         print "LearningAgent.update(): deadline = {}, inputs = {}, action = {}, reward = {}".format(deadline, inputs, action, reward)  # [debug]
 
