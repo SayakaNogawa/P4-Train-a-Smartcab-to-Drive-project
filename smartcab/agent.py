@@ -50,13 +50,13 @@ class LearningAgent(Agent):
         self.state = (inputs, self.next_waypoint, deadline)
 
         # TODO: Select action according to your policy
-        action = random.choice(Environment.valid_actions)
+
 
         # Execute action and get reward
         reward = self.env.act(self, action)
 
         # TODO: Learn policy based on state, action, reward
-        #self.update_q_value(self.state, action, reward)
+
         print "LearningAgent.update(): deadline = {}, inputs = {}, action = {}, reward = {}".format(deadline, inputs, action, reward)  # [debug]
 
 
