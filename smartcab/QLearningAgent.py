@@ -12,30 +12,37 @@ class LearningAgent(Agent):
         self.planner = RoutePlanner(self.env, self)  # simple route planner to get next_waypoint
         # TODO: Initialize any additional variables here
         self.dedline = self.env.get_deadline(self)
-        self.possible_action = Environment.valiable_action
+        self.possible_action = Environment.valid_actions
         self.Q_dict = dict()
         self.alpfa = 0.9
+        self.gamma = 0
         self.state = None
         self.action = None
         self.next_waypoint = None
         self.reward = None
+        self.cum_rewards = 0
 
     def reset(self, destination=None):
         self.planner.route_to(destination)
         # TODO: Prepare for a new trip; reset any variables here, if required
-        self.state = None
-        self.action = None
         self.next_waypoint = None
+
+        self.state = None
+        self.next_state = None
+
+        self.action = None
+
         self.reward = 0
+        self.cum_rewards = 0
 
     def get_Q(self, state, action):
-        key = (state, action)
+        key = {(self.state, action)}
         return self.Q_dict.get(key, 10.0)
 
     def get_maxQ(self, state):
-         """
-         Returns maxQ(state,action)
-         """
+        """
+        Returns maxQ(state,action)
+        """
         best_Q = [self.get_Q(state, action) for action in self.possible_action]
         return max(best_Q)
 
@@ -44,13 +51,14 @@ class LearningAgent(Agent):
         Choose the best action
         """
         best_action = random.choice(self.possible_action)
-        best_Q = [self.get_Q(state, action) for action in self.possible_action]
-        key = (state, action)
+        #best_Q = [self.get_Q(state, action) for action in self.possible_action]
+        qval = qtable[(current_state, best_action)]
+        #key = (state, action)
 
-        for key in Q_dict:
-            if state == current_state and self.get_Q(state, action) > best_Q:
-                best_action = action
-                best_Q = self.get_Q(state, action)
+        for (state, action) in qtable:
+            if self.next_state == self.state and qtable[(state, action)] > qval:
+               best_action = action
+               best_Q = qtable[(state, action)]
             else:
                 continue
         return best_action
@@ -102,9 +110,9 @@ class LearningAgent(Agent):
         self.state = self.next_state
         self.action = action
         self.reward = next_reward
+        self.cum_rewards += next_reward
 
-
-        print "LearningAgent.update(): deadline = {}, inputs = {}, action = {}, reward = {}".format(deadline, inputs, action, reward)  # [debug]
+        #print "LearningAgent.update(): deadline = {}, inputs = {}, action = {}, reward = {}".format(deadline, inputs, action, reward)  # [debug]
 
 
 def run():
