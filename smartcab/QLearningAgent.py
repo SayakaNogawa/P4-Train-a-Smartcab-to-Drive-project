@@ -36,7 +36,7 @@ class LearningAgent(Agent):
         self.cum_rewards = 0
 
     def get_Q(self, state, action):
-        key = {(self.state, action)}
+        key = (state, action)
         return self.Q_dict.get(key, 10.0)
 
     def get_maxQ(self, state):
@@ -48,20 +48,38 @@ class LearningAgent(Agent):
 
     def get_action(self, state):
         """
-        Choose the best action
+        Choose the best action with Epsilon-Greedy approach
         """
         best_action = random.choice(self.possible_action)
-        #best_Q = [self.get_Q(state, action) for action in self.possible_action]
-        qval = qtable[(current_state, best_action)]
-        #key = (state, action)
+        best_Q = [self.get_Q(state, action) for action in self.possible_action]
 
-        for (state, action) in qtable:
-            if self.next_state == self.state and qtable[(state, action)] > qval:
-               best_action = action
-               best_Q = qtable[(state, action)]
-            else:
-                continue
-        return best_action
+        #return highest arm
+        if random.random() > self.epsilon:
+
+            for action in self.possible_action:
+
+                if self.next_state == self.state and get_Q(state, action) > max(best_Q):
+                    best_action = action
+                    best_Q = get_Q[(state, action)]
+
+                else:
+                    continue
+                return best_action
+
+        else:
+            return best_action #np.random.randint(0, len(self.possible_action))
+
+		#if random.random() < self.epsilon:
+			####if q.count(max(q)) > 1:
+				##index = random.choice(best_actions)
+
+			#else:
+				#index = q.index(max(q))
+			#action = self.possible_actions[index]
+
+		#return action
+
+
 
     def update_Q(self, state, action, nextState, reward):
         """
