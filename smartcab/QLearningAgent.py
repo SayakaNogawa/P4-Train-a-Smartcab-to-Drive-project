@@ -14,6 +14,7 @@ class LearningAgent(Agent):
         self.dedline = self.env.get_deadline(self)
         self.possible_action = Environment.valid_actions
         self.Q_dict = dict()
+        self.epsilon = 0.05
         self.alpfa = 0.9
         self.gamma = 0
         self.state = None
@@ -50,37 +51,25 @@ class LearningAgent(Agent):
         """
         Choose the best action with Epsilon-Greedy approach
         """
-        best_action = random.choice(self.possible_action)
-        best_Q = [self.get_Q(state, action) for action in self.possible_action]
-
         #return highest arm
+
         if random.random() > self.epsilon:
+            action = random.choice(self.possible_action)
+            best_Q = [self.get_Q(state, action) for action in self.possible_action]
 
             for action in self.possible_action:
 
-                if self.next_state == self.state and get_Q(state, action) > max(best_Q):
+                if self.next_state == self.state and self.get_Q(state, action) > max(best_Q):
                     best_action = action
                     best_Q = get_Q[(state, action)]
-
+                    index = random.choice(best_action)
                 else:
-                    continue
-                return best_action
+                    index = best_Q.index(max(best_Q))
+                    action = self.possible_action[index]
 
         else:
-            return best_action #np.random.randint(0, len(self.possible_action))
-
-		#if random.random() < self.epsilon:
-			####if q.count(max(q)) > 1:
-				##index = random.choice(best_actions)
-
-			#else:
-				#index = q.index(max(q))
-			#action = self.possible_actions[index]
-
-		#return action
-
-
-
+            return action
+            
     def update_Q(self, state, action, nextState, reward):
         """
         Q-Value update
@@ -113,7 +102,10 @@ class LearningAgent(Agent):
         if action_okay == False:
             action = None
 
-        self.next_state = (inputs, self.next_waypoint, deadline)
+        self.new_state = inputs
+        self.new_state['next_waypoint'] = self.next_waypoint
+        self.new_state = tuple(sorted(self.new_state.items()))
+        #self.next_state = (inputs, self.next_waypoint, deadline)
 
         # TODO: Select action according to your policy
         action = self.get_action(self.next_state)
