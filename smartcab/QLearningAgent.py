@@ -52,24 +52,25 @@ class LearningAgent(Agent):
         Choose the best action with Epsilon-Greedy approach
         """
         #return highest arm
+        best_Q = [self.get_Q(state, action) for action in self.possible_action]
 
         if random.random() > self.epsilon:
             action = random.choice(self.possible_action)
-            best_Q = [self.get_Q(state, action) for action in self.possible_action]
+
+        else:
 
             for action in self.possible_action:
 
                 if self.next_state == self.state and self.get_Q(state, action) > max(best_Q):
                     best_action = action
-                    best_Q = get_Q[(state, action)]
+                    #best_Q = get_Q[(state, action)]
                     index = random.choice(best_action)
                 else:
                     index = best_Q.index(max(best_Q))
                     action = self.possible_action[index]
 
-        else:
-            return action
-            
+        return action
+
     def update_Q(self, state, action, nextState, reward):
         """
         Q-Value update
@@ -80,6 +81,11 @@ class LearningAgent(Agent):
         else:
             self.Q_dict[key] = self.Q_dict[key] + self.alpfa * (reward + self.gamma * self.get_maxQ(nextState) - self.Q_dict[key])
 
+    def update_S(self, state):
+        """
+        createing the Q_dict
+        """
+
     def update(self, t):
         # Gather inputs
         self.next_waypoint = self.planner.next_waypoint()  # from route planner, also displayed by simulator
@@ -87,25 +93,7 @@ class LearningAgent(Agent):
         deadline = self.env.get_deadline(self)
 
         # TODO: Update state
-        action_okay = True
-
-        if self.next_waypoint == 'right':
-            if inputs['light'] == 'red' and inputs['left'] == 'forward':
-                action_okay = False
-        elif self.next_waypoint == 'forward':
-            if inputs['light'] == 'red':
-                action_okay = False
-        elif self.next_waypoint == 'left':
-            if inputs['light'] == 'red' or (inputs['oncoming'] == 'forward' or inputs['oncoming'] == 'right'):
-                action_okay = False
-
-        if action_okay == False:
-            action = None
-
-        self.new_state = inputs
-        self.new_state['next_waypoint'] = self.next_waypoint
-        self.new_state = tuple(sorted(self.new_state.items()))
-        #self.next_state = (inputs, self.next_waypoint, deadline)
+        self.next_state = self.update_S(inputs)
 
         # TODO: Select action according to your policy
         action = self.get_action(self.next_state)
