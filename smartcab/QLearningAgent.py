@@ -15,8 +15,8 @@ class LearningAgent(Agent):
         self.possible_action = Environment.valid_actions
         self.Q_dict = dict()
         self.epsilon = 0.05
-        self.alpfa = 0.9
-        self.gamma = 0
+        self.alpha = 0.5
+        self.gamma = 0.3
         self.state = None
         self.action = None
         self.next_waypoint = None
@@ -55,7 +55,7 @@ class LearningAgent(Agent):
         best_Q = [self.get_Q(state, action) for action in self.possible_action]
 
         if random.random() > self.epsilon:
-            action = random.choice(self.possible_action)
+                best_action = random.choice(self.possible_action)
 
         else:
 
@@ -63,13 +63,11 @@ class LearningAgent(Agent):
 
                 if self.next_state == self.state and self.get_Q(state, action) > max(best_Q):
                     best_action = action
-                    #best_Q = get_Q[(state, action)]
-                    index = random.choice(best_action)
+                    best_Q = self.possible_action[(state, action)]
                 else:
-                    index = best_Q.index(max(best_Q))
-                    action = self.possible_action[index]
+                    best_action = random.choice(self.possible_action)
 
-        return action
+        return best_action
 
     def update_Q(self, state, action, nextState, reward):
         """
@@ -79,12 +77,7 @@ class LearningAgent(Agent):
         if (key not in self.Q_dict):
             self.Q_dict[key] = 10.0
         else:
-            self.Q_dict[key] = self.Q_dict[key] + self.alpfa * (reward + self.gamma * self.get_maxQ(nextState) - self.Q_dict[key])
-
-    def update_S(self, state):
-        """
-        createing the Q_dict
-        """
+            self.Q_dict[key] = self.Q_dict[key] + self.alpha * (reward + self.gamma * self.get_maxQ(nextState) - self.Q_dict[key])
 
     def update(self, t):
         # Gather inputs
@@ -93,7 +86,9 @@ class LearningAgent(Agent):
         deadline = self.env.get_deadline(self)
 
         # TODO: Update state
-        self.next_state = self.update_S(inputs)
+
+        #self.next_state = (tuple(inputs.values()), self.next_waypoint)
+        self.state = (inputs['light'],inputs['oncoming'], inputs['left'], self.next_waypoint)
 
         # TODO: Select action according to your policy
         action = self.get_action(self.next_state)
