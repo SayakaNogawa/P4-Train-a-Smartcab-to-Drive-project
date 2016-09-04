@@ -21,9 +21,9 @@ class LearningAgent(Agent):
         self.cum_rewards = 0
         self.next_waypoint = None
 
-        self.epsilon = 0.2 # Pick a random action 20% of the time.
-        self.alpha = 0.8 # learning rate
-        self.gamma = 0.5 # discount maxQ(s',a')
+        self.epsilon = 0.05 # Pick a random action 20% of the time.
+        self.alpha = 0.9 # learning rate
+        self.gamma = 0.2 # discount maxQ(s',a')
 
     def reset(self, destination=None):
         self.planner.route_to(destination)
@@ -47,29 +47,33 @@ class LearningAgent(Agent):
 
     def epsilon_greedy(self, state):
         # Choose the best action with Epsilon-Greedy approach
-        q = [self.get_Q(state, a) for a in self.possible_action]
-        max_Q = max(q)
-
-        if random.random() < self.epsilon: # random move
-            best_action = random.choice(self.possible_action)
+        if random.random < self.epsilon:
+            max_action = random.choice(self.possible_action)
 
         else:
-            if q.count(max_Q) > 1:
-                # Pick an action
-                action = [i for i in range(len(self.possible_action)) if q[i] == max_Q]
-                action_idx = random.choice(action)
-            else:
-                action_idx = q.index(max_Q)
-            best_action = self.possible_action[action_idx]
+            max_reward = -float("inf")
+            max_action = None
 
-        return best_action
+            for action in self.possible_action:
+                key = (state, a)
+                reward = self.get_Q(state, a)
+            # Find maximum
+                if reward > max_reward:
+                    max_reward = reward
+                    max_action = action
+            # max_action is now argmax
+                elif reward == max_reward:
+                    max_action = random.choice(action)
 
-    def Q_learning(self, state, action, next_state, reward):
-        getq = self.Q_dict.get(state, action)
-        if getq is None:
-            getq = 10.0
+        return max_action
+
+    def Q_learn(self, state, action, next_state, reward):
+        key = (state, action)
+        if (key not in self.Q_dict):
+			# initialize the q values
+			self.Q_dict[key] = 10.0
         else:
-            self.Q_dict[key] = self.Q_dict[key] + self.alpha*(reward + self.gamma*self.get_maxQ(next_state) - self.Q_dict[key])
+            self.Q_dict[key] = self.Q_dict[key] + self.alpha * (reward + self.gamma * self.get_maxQ(next_state) - self.Q_dict[key])
 
     def update(self, t):
         # Gather inputs
@@ -109,7 +113,7 @@ def run():
     # You can set enforce_deadline=False while debugging to allow longer trials
 
     # Now simulate it
-    sim = Simulator(e, update_delay=.0001, display=False)  # create simulator (uses pygame when display=True, if available)
+    sim = Simulator(e, update_delay=.001, display=True)  # create simulator (uses pygame when display=True, if available)
     # To speed up simulation, reduce update_delay and/or set display=False
 
     sim.run(n_trials=100)  # run for a specified number of trials
