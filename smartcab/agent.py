@@ -44,20 +44,20 @@ class LearningAgent(Agent):
             if inputs['light'] == 'red' or (inputs['oncoming'] == 'forward' or inputs['oncoming'] == 'right'):
                 action_okay = False
 
-        if action_okay == False:
+        if not action_okay:
             action = None
 
-        self.state = (inputs, self.next_waypoint, deadline)
+        self.state = (inputs, self.next_waypoint)
 
         # TODO: Select action according to your policy
-
+        action = random.choice(Environment.valid_actions)
 
         # Execute action and get reward
         reward = self.env.act(self, action)
 
         # TODO: Learn policy based on state, action, reward
 
-        print "LearningAgent.update(): deadline = {}, inputs = {}, action = {}, reward = {}".format(deadline, inputs, action, reward)  # [debug]
+        #print "LearningAgent.update(): deadline = {}, inputs = {}, action = {}, reward = {}".format(deadline, inputs, action, reward)  # [debug]
 
 
 def run():
