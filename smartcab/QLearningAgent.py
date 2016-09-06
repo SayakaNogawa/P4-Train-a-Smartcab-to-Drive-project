@@ -21,7 +21,7 @@ class LearningAgent(Agent):
         self.cum_rewards = 0
         self.next_waypoint = None
 
-        self.epsilon = 0.05 # Pick a random action 20% of the time.
+        self.epsilon = 0.05 # pick a random action
         self.alpha = 0.9 # learning rate
         self.gamma = 0.2 # discount maxQ(s',a')
 
@@ -35,14 +35,14 @@ class LearningAgent(Agent):
         self.cum_rewards = 0
         self.next_waypoint = None
 
-    def get_Q(self, state, action):
+    def qval(self, state, action):
         # Q value (s,a)
         key = (state, action)
         return self.Q_dict.get(key, 10.0)
 
-    def get_maxQ(self, state):
+    def maxQ(self, state):
         # Returns maxQ(s,a)
-        q = [self.get_Q(state, a) for a in self.possible_action]
+        q = [self.qval(state, a) for a in self.possible_action]
         return max(q)
 
     def epsilon_greedy(self, state):
@@ -53,18 +53,14 @@ class LearningAgent(Agent):
         else:
             max_reward = -float("inf")
             max_action = None
-
-            for action in self.possible_action:
-                key = (state, a)
-                reward = self.get_Q(state, a)
+            for a in self.possible_action:
+                reward = self.env.act(self, a)
             # Find maximum
                 if reward > max_reward:
                     max_reward = reward
-                    max_action = action
-            # max_action is now argmax
-                elif reward == max_reward:
-                    max_action = random.choice(action)
-
+                    max_action = a # max_action is now argmax
+                else: #reward == max_reward
+                    continue
         return max_action
 
     def Q_learn(self, state, action, next_state, reward):
@@ -73,7 +69,7 @@ class LearningAgent(Agent):
 			# initialize the q values
 			self.Q_dict[key] = 10.0
         else:
-            self.Q_dict[key] = self.Q_dict[key] + self.alpha * (reward + self.gamma * self.get_maxQ(next_state) - self.Q_dict[key])
+            self.Q_dict[key] = self.Q_dict[key] + self.alpha * (reward + self.gamma * self.maxQ(next_state) - self.Q_dict[key])
 
     def update(self, t):
         # Gather inputs
