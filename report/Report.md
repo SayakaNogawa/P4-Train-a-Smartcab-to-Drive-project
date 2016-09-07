@@ -50,21 +50,14 @@ Justify why you picked these set of states, and how they model the agent and its
 
 I identified two state variables before implementing a Q-Learning driving agent.
 
-<<<<<<< HEAD
 - Each intersection<br>
-  I choose these intersection states because there are some rules in US we have to obey. Each entersection include the traffic lights (`red` / `green`), the oncoming traffic (`left`, `right` or `None`) from 2 other cars (`oncoming`, `left`). _US right-of-way rules_ : On a green light, you can turn left only if there is no oncoming traffic at the intersection coming straight. On a red light, you can turn right if there is no oncoming traffic turning left or traffic from the left going straight.
+  I choose these intersection states because there are some rules in US we have to obey. Each intersection include the traffic lights (`red` / `green`), the oncoming traffic (`left`, `right` or `None`) from 2 other cars (`oncoming`, `left`).<br>
+  **US right-of-way rules:** On a green light, you can turn left only if there is no oncoming traffic at the intersection coming straight. On a red light, you can turn right if there is no oncoming traffic turning left or traffic from the left going straight.
 
 - `next_waypoint`<br>
   I choose this state because we can not directly choose destination and next waypoint informs which way we would prefer to travel.
-=======
-- Each intersection   
-I choose these intersection states because there are some rules in US we have to obey. Each entersection include the traffic lights (`red` / `green`), the oncoming traffic (`left`, `right` or `None`) from 2 other cars (`oncoming`, `left`). _US right-of-way rules_ : On a green light, you can turn left only if there is no oncoming traffic at the intersection coming straight. On a red light, you can turn right if there is no oncoming traffic turning left or traffic from the left going straight.
 
-- `next_waypoint`    
-I choose this state because we can not directly choose destination and next waypoint informs which way we would prefer to travel.
->>>>>>> 1c5f9a13bc74e1cf8080b5ff6c3350263028fcc3
-
-I don't include dedline. There are a lot of possible deadline values so it will be large in memory.
+I don't include deadline. There are a lot of possible deadline values so it will be large in memory.
 
 ### 3\. Implement a Q-Learning Driving Agent
 
@@ -95,18 +88,18 @@ Apply the reinforcement learning techniques you have learnt, and tweak the param
 
 **Report the different values for the parameters tuned in your basic implementation of Q-Learning. For which set of parameters does the agent perform best? How well does the final driving agent perform?**
 
-I turned parameters alpha, gammma, epsilon and epsilon degradation. Just by looking at the results from the agent in `Qlearn.txt`.
+I turned parameters alpha, gamma, epsilon and epsilon degradation. Just by looking at the results from the agent in `Qlearn.txt`.
 
 Here are some performances:
 
-alpha | gammma | epsilon | degradation | success rate
------ | :----: | ------- | :---------: | ------------
-0.5   |  0.5   | 1       |      0      | 27%
-0.5   |  0.5   | 1       |    0.01     | 70%
-0.1   |  0.9   | 0.1     |    0.01     | 82%
-0.7   |  0.5   | 0.05    |    0.001    | 80%
-0.9   |  0.35  | 0.01    |   0.0001    | 83%
-0.9   |  0.01  | 0.1     |    0.001    | 84%
+alpha | gamma | epsilon | degradation | success rate
+----- | :---: | ------- | :---------: | ------------
+0.5   |  0.5  | 1       |      0      | 27%
+0.5   |  0.5  | 1       |    0.01     | 70%
+0.1   |  0.9  | 0.1     |    0.01     | 82%
+0.7   |  0.5  | 0.05    |    0.001    | 80%
+0.9   | 0.35  | 0.01    |   0.0001    | 83%
+0.9   | 0.01  | 0.1     |    0.001    | 84%
 
 The best set of parameters are below:
 
