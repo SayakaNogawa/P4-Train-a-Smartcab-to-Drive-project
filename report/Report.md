@@ -50,9 +50,11 @@ Justify why you picked these set of states, and how they model the agent and its
 
 I identified two state variables before implementing a Q-Learning driving agent.
 
-- Each intersection I choose these intersection states because there are some rules in US we have to obey. Each entersection include the traffic lights (`red` / `green`), the oncoming traffic (`left`, `right` or `None`) from 2 other cars (`oncoming`, `left`). _US right-of-way rules_ : On a green light, you can turn left only if there is no oncoming traffic at the intersection coming straight. On a red light, you can turn right if there is no oncoming traffic turning left or traffic from the left going straight.
+- Each intersection<br>
+  I choose these intersection states because there are some rules in US we have to obey. Each entersection include the traffic lights (`red` / `green`), the oncoming traffic (`left`, `right` or `None`) from 2 other cars (`oncoming`, `left`). _US right-of-way rules_ : On a green light, you can turn left only if there is no oncoming traffic at the intersection coming straight. On a red light, you can turn right if there is no oncoming traffic turning left or traffic from the left going straight.
 
-- `next_waypoint` I choose this state because we can not directly choose destination and next waypoint informs which way we would prefer to travel.
+- `next_waypoint`<br>
+  I choose this state because we can not directly choose destination and next waypoint informs which way we would prefer to travel.
 
 I don't include dedline. There are a lot of possible deadline values so it will be large in memory.
 
