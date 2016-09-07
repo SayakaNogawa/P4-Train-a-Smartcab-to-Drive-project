@@ -1,0 +1,205 @@
+try: 1 success rate: 19%
+=================================================================
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+
+try: 2 success rate: 23%
+=================================================================
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.

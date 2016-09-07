@@ -1,0 +1,691 @@
+parameters: alpha: 0.5, gamma: 0.5, epsilon: 1, deg_epsilon: 0
+success rate: 27%
+==================================================================
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+
+parameters: alpha: 0.5, gamma: 0.5, epsilon: 1, deg_epsilon: 0.01
+success rate: 70%
+==================================================================
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+
+parameters: alpha , gamma:  epsilon: , deg_epsilon:
+success rate: %
+==================================================================
+
+parameters: alpha , gamma:  epsilon: , deg_epsilon:
+success rate: %
+==================================================================
+
+parameters: alpha: 0.1, gamma: 0.9, epsilon: 0.1, deg_epsilon:0.01
+success rate: 82%
+==================================================================
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+
+parameters: alpha: 0.7, gamma: 0.5, epsilon: 0.05, deg_epsilon: 0.001
+success rate: 80%
+==================================================================
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+
+parameters: alpha: 0.9, gamma: 0.35, epsilon: 0.01, deg_epsilon: 0.0001
+success rate: 83%
+==================================================================
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+
+parameters: alpha: 0.9, gamma: 0.01 epsilon: 0.1, deg_epsilon:0.001
+success rate: 84%
+==================================================================
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.step(): Primary agent ran out of time! Trial aborted.
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
+Environment.act(): Primary agent has reached destination!
