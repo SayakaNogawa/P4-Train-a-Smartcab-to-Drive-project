@@ -34,6 +34,11 @@ class Environment(object):
     def __init__(self, num_dummies=3):
         self.num_dummies = num_dummies  # no. of dummy agents
 
+        # status report trackers
+        self.win = 0
+        self.lose = 0
+        self.penalty = 0
+
         # Initialize simulation variables
         self.done = False
         self.t = 0
@@ -125,6 +130,7 @@ class Environment(object):
                 print "Environment.step(): Primary agent hit hard time limit ({})! Trial aborted.".format(self.hard_time_limit)
             elif self.enforce_deadline and agent_deadline <= 0:
                 self.done = True
+                self.lose += 1
                 print "Environment.step(): Primary agent ran out of time! Trial aborted."
             self.agent_states[self.primary_agent]['deadline'] = agent_deadline - 1
 
@@ -204,12 +210,14 @@ class Environment(object):
         else:
             # Invalid move
             reward = -1.0
+            self.penalty += 1
 
         if agent is self.primary_agent:
             if state['location'] == state['destination']:
                 if state['deadline'] >= 0:
                     reward += 10  # bonus
                 self.done = True
+                self.win += 1
                 print "Environment.act(): Primary agent has reached destination!" # [debug]
             self.status_text = "state: {}\naction: {}\nreward: {}".format(agent.get_state(), action, reward)
             #print "Environment.act() [POST]: location: {}, heading: {}, action: {}, reward: {}".format(location, heading, action, reward)  # [debug]
