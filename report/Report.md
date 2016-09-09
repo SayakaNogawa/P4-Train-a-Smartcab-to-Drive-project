@@ -119,14 +119,20 @@ The Smartcab reached the destination around 95~100%. This performance is much be
 
 **Does your agent get close to finding an optimal policy, i.e. reach the destination in the minimum possible time, and not incur any penalties? How would you describe an optimal policy for this problem?**
 
-I believe the agent is fairly close, but it is not perfect. The smartcab is not always arrive on time, and it still takes illegal actions sometimes(Refer to the answer to the previous question).
+I believe the agent get fairly close to finding an optimal policy, but it is not perfect. The smartcab is not always arrive on time, and it still takes illegal actions sometimes(Refer to the answer to the previous question). Actually, my best agent parformed 22 illegal actions.
 
 Here is an example:
 
 ```
-LearningAgent.update(): deadline = 31, inputs = {'light': 'red', 'oncoming': 'forward', 'right': None, 'left': None}, action = left, reward = -1.0   
+LearningAgent.update():
+deadline = 31,
+inputs = {'light': 'red', 'oncoming': 'forward', 'right': None, 'left': None},
+action = left, reward = -1.0   
 
-LearningAgent.update(): deadline = 30, inputs = {'light': 'red', 'oncoming': 'forward', 'right': None, 'left': None}, action = right, reward = -0.5
+LearningAgent.update():
+deadline = 30, 
+inputs = {'light':'red', 'oncoming': 'forward', 'right': None, 'left': None},
+action = right, reward = -0.5
 ```
 
-In the real word, the cab must An optimal policy taking the smallest route without performing many illegal moves. The most optimal policy must arrive on time 99.99% of the time. (Only if deadline is reasonable)
+Additionally, I noticed the smartcab reaches the destination quickly with less number of moves. The overall rewards are shorter towards the end due to the fact that the agent makes it to the destination early. However, In the real world, it causes car crash when the cab takes illegal actions. Therefore, I can say that an optimal policy taking the smallest route without performing many illegal actions.
