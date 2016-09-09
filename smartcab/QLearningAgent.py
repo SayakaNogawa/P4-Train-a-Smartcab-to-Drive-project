@@ -15,16 +15,20 @@ class LearningAgent(Agent):
         self.possible_actions = Environment.valid_actions
         self.Q_dict = dict() # Q(s,a)
 
-        self.alpha = 0.9 # learning rate
-        self.gamma = 0.01 # discount maxQ(s',a')
+        self.alpha = 0.8 # learning rate
+        self.gamma = 0.4 # discount maxQ(s',a')
         self.epsilon = 0.1 # pick a random action
-        self.deg_epsilon = 0.001 # degradation of ramdom action
+        self.deg_epsilon = 0.01 # degradation of ramdom action
 
         self.state = None
         self.next_state = None
         self.action = None
         self.reward = None
         self.cum_rewards = 0
+
+        self.num_moves = 0
+        self.penalty = 0
+
         self.next_waypoint = None
 
     def reset(self, destination=None):
@@ -34,12 +38,16 @@ class LearningAgent(Agent):
         self.action = None
         self.reward = 0
         self.cum_rewards = 0
+
+        self.num_moves = 0
+        self.penalty = 0
+
         self.next_waypoint = None
 
     def qval(self, state, action):
         # Q value (s,a)
         key = (state, action)
-        return self.Q_dict.get(key, 6.0)
+        return self.Q_dict.get(key, 2.0)
 
     def maxQ(self, state):
         # Returns maxQ(s,a)
@@ -51,26 +59,27 @@ class LearningAgent(Agent):
         if random.random() < self.epsilon:
             self.epsilon -= self.deg_epsilon
             max_action = random.choice(self.possible_actions)
+
         else:
-            max_reward = -float("inf")
-            max_action = None
-            for a in self.possible_actions:
-                reward = self.env.act(self, a)
+            max_action = self.possible_actions[0]
+            max_reward = None
             # Find maximum
-                if reward > max_reward:
-                    max_reward = reward
-                    max_action = a # max_action is now argmax
-                elif reward == max_reward:
-                    best_action = random.choice([best_action, a])
+            for action in self.possible_actions:
+                cur_reward = self.qval(state, action)
+                if cur_reward > max_reward:
+                    max_reward = cur_reward
+                    max_action = action # max_action is argmax
+                elif cur_reward == max_reward:
+                    max_action = random.choice([max_action, action])
         return max_action
 
     def Q_learn(self, state, action, nextState, reward):
         key = (state, action)
         if (key not in self.Q_dict):
 			# initialize the q values
-			self.Q_dict[key] = 6.0
+			self.Q_dict[key] = 2.0
         else:
-            self.Q_dict[key] = self.Q_dict[key] + self.alpha * (reward + self.gamma*self.maxQ(nextState) - self.Q_dict[key])
+            self.Q_dict[key] = self.Q_dict[key] + self.alpha * (reward + self.gamma * self.maxQ(nextState) - self.Q_dict[key])
 
     def update(self, t):
         # Gather inputs
@@ -80,6 +89,7 @@ class LearningAgent(Agent):
 
         # Update state
         self.next_state = (tuple(inputs.values()), self.next_waypoint)
+        #self.next_state = (inputs["light"], self.next_waypoint)
 
         # Update action
         next_action = self.epsilon_greedy(self.next_state)
@@ -91,14 +101,15 @@ class LearningAgent(Agent):
         if self.reward != None:
             # update Q-value
             self.Q_learn(self.state, self.action, self.next_state, self.reward)
+
         # Update stats
         self.state = self.next_state
         self.action = next_action
         self.reward = next_reward
         self.cum_rewards += next_reward
+        self.num_moves += 1
 
-        #print "LearningAgent.update(): deadline = {}, inputs = {}, action = {}, reward = {}".format(deadline, inputs, action, reward)  # [debug]
-
+        #print "LearningAgent.update(): deadline = {}, inputs = {}, action = {}, reward = {}".format(deadline, inputs, next_action, next_reward)  # [debug]
 
 def run():
     """Run the agent for a finite number of trials."""
@@ -115,6 +126,10 @@ def run():
 
     sim.run(n_trials=100)  # run for a specified number of trials
     # To quit midway, press Esc or close pygame window, or hit Ctrl+C on the command-line
+
+    # Status reports
+    print "Win: {} / ".format(e.win) + "Lose: {} ".format(e.lose) # Success rates
+    print "Penalty: {} / ".format(e.penalty) + "Reward: {} / ".format(a.cum_rewards) + "Move: {} ".format(a.num_moves) # Other evaluation
 
 if __name__ == '__main__':
     run()
