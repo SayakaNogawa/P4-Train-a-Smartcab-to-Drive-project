@@ -57,7 +57,7 @@ I identified two state variables before implementing a Q-Learning driving agent.
 - `next_waypoint`<br>
   I choose this state because we can not directly choose destination and next waypoint informs which way we would prefer to travel.
 
-I don't include deadline. There are a lot of possible deadline values so it will be large in memory.
+I don't include deadline. There are a lot of possible deadline values, thus it will be large in memory. Additionally, the deadline could possibly influence the agent in making illegal moves when the deadline is near.
 
 ### 3\. Implement a Q-Learning Driving Agent
 
@@ -71,14 +71,18 @@ Q-Learning is implemented in `QLearningAgent.py`. I implemented the Q-learning a
 
 #### The Q-learning Algorithm Steps:
 
-- Initialize the Q-values table, Q(s, a).
-- Observe the current state, s.
-- Choose an action, a, for that state based on one of the action selection policies explained here on the previous page (-soft, -greedy or softmax).
-- Take the action, and observe the reward, r, as well as the new state, s'.
-- Update the Q-value for the state using the observed reward and the maximum reward possible for the next state. The updating is done according to the formula and parameters described above.
-- Set the state to the new state, and repeat the process until a terminal state is reached.
+![Qlearn.png](https://udacity-github-sync-content.s3.amazonaws.com/_imgs/19273/1473269807/qimp.jpg)
 
-reference: <http://www.cse.unsw.edu.au/~cs9417ml/RL1/algorithms.html>
+> - Initialize the Q-values table, Q(s, a).
+> - Observe the current state, s.
+> - Choose an action, a, for that state based on one of the action selection policies explained here on the previous page (-soft, -greedy or softmax).
+> - Take the action, and observe the reward, r, as well as the new state, s'.
+> - Update the Q-value for the state using the observed reward and the maximum reward possible for the next state. The updating is done according to the formula and parameters described above.
+> - Set the state to the new state, and repeat the process until a terminal state is reached.
+
+> Reference: <http://www.cse.unsw.edu.au/~cs9417ml/RL1/algorithms.html>
+
+![Qlearn.png](https://udacity-github-sync-content.s3.amazonaws.com/_imgs/19273/1473269140/54f202d12a4ca6fd3f95d013ede3f86b.png)
 
 I noticed that the agent's behavior is too different from what it used to be. The agent is learning the US right-of-way rules and is trying to manage to get to the waypoint before the deadline. Also, the smartcab getting to the destination more quickly. This is because the agent examines history of own behavior and what sort of rewards have occurred when it's taken actions in given states before.
 
@@ -92,25 +96,37 @@ I turned parameters alpha, gamma, epsilon and epsilon degradation. Just by looki
 
 Here are some performances:
 
-alpha | gamma | epsilon | degradation | success rate
------ | :---: | ------- | :---------: | ------------
-0.5   |  0.5  | 1       |      0      | 27%
-0.5   |  0.5  | 1       |    0.01     | 70%
-0.1   |  0.9  | 0.1     |    0.01     | 82%
-0.7   |  0.5  | 0.05    |    0.001    | 80%
-0.9   | 0.35  | 0.01    |   0.0001    | 83%
-0.9   | 0.01  | 0.1     |    0.001    | 84%
+alpha | gamma | epsilon | epsilon degradation | penalties | rewards | moves | success rate
+----- | :---: | ------- | :-----------------: | --------- | ------- | ----- | ------------
+0.5   |  0.5  | 1       |          0          | 695       | 9.4     | 31    | 19%
+0.5   |  0.5  | 1       |         0.1         | 35        | 22.0    | 15    | 92%
+0.5   |  0.5  | 0.1     |        0.01         | 28        | 18.0    | 8     | 98%
+0.2   |  0.8  | 0.1     |        0.01         | 19        | 22.5    | 9     | 89%
+0.8   |  0.2  | 0.1     |        0.01         | 23        | 18.0    | 6     | 99%
+0.9   |  0.2  | 0.1     |        0.01         | 30        | 26.0    | 26    | 98%
+0.7   |  0.2  | 0.1     |        0.01         | 30        | 20.0    | 16    | 98%
+0.7   |  0.4  | 0.1     |        0.01         | 30        | 23.5    | 16    | 98%
+0.8   |  0.4  | 0.1     |        0.01         | 22        | 22.0    | 12    | 100%
 
 The best set of parameters are below:
 
-- Learning Rate: 0.9
-- Discount Value: 0.01
+- Learning Rate: 0.8
+- Discount Value: 0.4
 - Epsilon Value: 0.1
-- Epsilon Degradation Rate: 0.001
+- Epsilon Degradation Rate: 0.01
 
-The Smartcab reached the destination around 80~84%. This performance is much better than `agent.py`.
+The Smartcab reached the destination around 95~100%. This performance is much better than `agent.py`.
 
 **Does your agent get close to finding an optimal policy, i.e. reach the destination in the minimum possible time, and not incur any penalties? How would you describe an optimal policy for this problem?**
 
-I think that the agent not even close. The most optimal policy must arrive on time 99.99% of the time. (Only if deadline is reasonable)<br>
-Additionally, it still takes illegal actions sometimes. An optimal policy taking the smallest route without performing many illegal moves.
+I believe the agent is fairly close, but it is not perfect. The smartcab is not always arrive on time, and it still takes illegal actions sometimes(Refer to the answer to the previous question).
+
+Here is an example:
+
+```
+LearningAgent.update(): deadline = 31, inputs = {'light': 'red', 'oncoming': 'forward', 'right': None, 'left': None}, action = left, reward = -1.0   
+
+LearningAgent.update(): deadline = 30, inputs = {'light': 'red', 'oncoming': 'forward', 'right': None, 'left': None}, action = right, reward = -0.5
+```
+
+In the real word, the cab must An optimal policy taking the smallest route without performing many illegal moves. The most optimal policy must arrive on time 99.99% of the time. (Only if deadline is reasonable)
