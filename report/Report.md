@@ -14,11 +14,11 @@ This project requires Python 2.7 with the pygame library installed:
 
 Make sure you are in the top-level smartcab directory. Then run:
 
-python `smartcab/agent.py`
+`python smartcab/agent.py`
 
 or:
 
-python -m `smartcab.agent`
+`python -m smartcab.agent`
 
 ## Tasks
 
@@ -57,7 +57,7 @@ I identified two state variables before implementing a Q-Learning driving agent.
 - `next_waypoint`<br>
   I choose this state because we can not directly choose destination and next waypoint informs which way we would prefer to travel.
 
-I don't include deadline. There are a lot of possible deadline values, thus it will be large in memory. Additionally, the deadline could possibly influence the agent in making illegal moves when the deadline is near.
+I don't include `deadline`. There are a lot of possible deadline values, thus it will be large in memory. Additionally, the deadline could possibly influence the agent in making illegal moves when the deadline is near.
 
 ### 3\. Implement a Q-Learning Driving Agent
 
@@ -96,6 +96,8 @@ I turned parameters alpha, gamma, epsilon and epsilon degradation. Just by looki
 
 Here are some performances:
 
+![table](https://github.com/SayakaNogawa/P4-Train-a-Smartcab-to-Drive-project/raw/master/path/to/images/table.png)
+
 alpha | gamma | epsilon | epsilon degradation | penalties | rewards | moves | success rate
 ----- | :---: | ------- | :-----------------: | --------- | ------- | ----- | ------------
 0.5   |  0.5  | 1       |          0          | 695       | 9.4     | 31    | 19%
@@ -130,7 +132,7 @@ inputs = {'light': 'red', 'oncoming': 'forward', 'right': None, 'left': None},
 action = left, reward = -1.0   
 
 LearningAgent.update():
-deadline = 30, 
+deadline = 30,
 inputs = {'light':'red', 'oncoming': 'forward', 'right': None, 'left': None},
 action = right, reward = -0.5
 ```
